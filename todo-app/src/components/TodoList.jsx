@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 
 const TodoList = () => {
 const [input, setInput] = useState("");
-const [todos, setTodos] = useState("");
+const [todos, setTodos] = useState([]);
 const [error, setError] = useState(null);
 
 const addTodos = (e) => {
@@ -30,7 +30,7 @@ const removeTodo = (id) => {
             <input type="text" 
             placeholder='Enter todo'
             value={input}
-            onChange={()=>setInput(e.target.value)}/>
+            onChange={(e)=>setInput(e.target.value)}/>
 
             <button type='submit'>Add</button>
           </form>
